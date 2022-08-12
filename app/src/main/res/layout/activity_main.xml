@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:onClick="signIn"
-        android:text="Login"
+        android:text="signIn"
         app:layout_constraintStart_toStartOf="@+id/TBpassword"
         app:layout_constraintTop_toBottomOf="@+id/TBpassword" />
 

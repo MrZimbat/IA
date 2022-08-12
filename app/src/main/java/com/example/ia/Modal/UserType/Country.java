@@ -1,12 +1,10 @@
 package com.example.ia.Modal.UserType;
 
-import android.text.Editable;
-
 public class Country extends User{
 
     private String country;
 
-    public Country (String name, String email, String usertype, String uid, Editable country){
+    public Country (String name, String email, String usertype, String uid, String country){
         super(name, email, usertype, uid);
         this.country = country;
     }

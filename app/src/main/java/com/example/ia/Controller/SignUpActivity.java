@@ -134,14 +134,14 @@ public class SignUpActivity extends AppCompatActivity {
                     }
                 });
         if(selectedRole.equals("Country")){
-            Editable country = countryField.getText();
-            Country newUser = new Country(nameString, emailString, "Country", UserId, country);
+            String countrya = String.valueOf(countryField.getText());
+            Country newUser = new Country(nameString, emailString, "Country", UserId, countrya);
             uidGenerator++;
             firestore.collection("User").document(UserId).set(newUser);
         }
         if(selectedRole.equals("Regional")){
-            Editable region = regionField.getText();
-            Regional newUser = new Regional(nameString, emailString, "Regional", UserId, region);
+            String regiona = String.valueOf(regionField.getText());
+            Regional newUser = new Regional(nameString, emailString, "Regional", UserId, regiona);
             uidGenerator++;
             firestore.collection("User").document(UserId).set(newUser);
         }

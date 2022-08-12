@@ -1,12 +1,10 @@
 package com.example.ia.Modal.UserType;
 
-import android.text.Editable;
-
 public class Regional extends User{
 
     private String region;
 
-    public Regional(String name, String email, String usertype, String uid, Editable region){
+    public Regional(String name, String email, String usertype, String uid, String region){
         super(name, email,usertype, uid);
         this.region = region;
     }
