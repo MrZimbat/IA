@@ -3,6 +3,7 @@ package com.example.ia.Controller;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.ia.R;
 
@@ -13,4 +14,6 @@ public class MedProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_med_profile);
     }
+
+
 }
