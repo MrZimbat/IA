@@ -42,6 +42,9 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_med_info);
+        mAuth = FirebaseAuth.getInstance();
+        firestore = FirebaseFirestore.getInstance();
+
 
         MedList = new ArrayList<Med>();
 
@@ -71,7 +74,7 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
     public void testDB(View v) {
         MedList.clear();
         TaskCompletionSource<String> getAllRidesTask = new TaskCompletionSource<>();
-        firestore.collection(Constants.MED_CONSTANT).whereEqualTo("open", true)
+        firestore.collection(Constants.MED_CONSTANT)
                 .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -112,7 +115,71 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        ArrayList<Med> filtered = new ArrayList<>();
 
+        String selected = spinner.getItemAtPosition(spinner.getSelectedItemPosition()).toString();
+        System.out.println("Spinner selected = " + selected);
+
+        if(selected.equals("No Filter")){
+            recView.setAdapter(new BookAdapter(filtered, MedInfoActivity.this));
+            recView.setLayoutManager(new LinearLayoutManager(this));
+
+        }
+        else if(selected.equals("Afterin")) {
+            for (Med v : MedList) {
+                if (v.getMedName().equals("Afterin")) {
+                    filtered.add(v);
+                }
+            }
+        }
+
+        else if(selected.equals("Avetrol")) {
+            for (Med v : MedList) {
+                if (v.getMedName().equals("Avetrol")) {
+                    filtered.add(v);
+                }
+            }
+        }
+
+        else if(selected.equals("Caldril")) {
+            for (Med v : MedList) {
+                if (v.getMedName().equals("Caldril")) {
+                    filtered.add(v);
+                }
+            }
+        }
+
+        else if(selected.equals("Kaynesten")) {
+            for (Med v : MedList) {
+                if (v.getMedName().equals("Kaynesten")) {
+                    filtered.add(v);
+                }
+            }
+        }
+
+        else if(selected.equals("Lastoril")) {
+            for (Med v : MedList) {
+                if (v.getMedName().equals("Lastoril")) {
+                    filtered.add(v);
+                }
+            }
+        }
+
+        else if(selected.equals("Liftrin")) {
+            for (Med v : MedList) {
+                if (v.getMedName().equals("Liftrin")) {
+                    filtered.add(v);
+                }
+            }
+        }
+
+        else if(selected.equals("Vermidon")) {
+            for (Med v : MedList) {
+                if (v.getMedName().equals("Vermidon")) {
+                    filtered.add(v);
+                }
+            }
+        }
     }
 
     @Override
