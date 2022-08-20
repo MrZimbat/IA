@@ -1,6 +1,8 @@
 package com.example.ia.Modal.Medicine;
 
-public class Med {
+import java.io.Serializable;
+
+public class Med implements Serializable {
 
     private String activeIngrediant;
     private String strength;
@@ -12,6 +14,10 @@ public class Med {
     private String maPrepDate;
     private String medID;
     private String medName;
+
+    public Med(){
+
+    }
 
     public Med(String activeIngrediant, String strength, String type, String country, String maDate, String maExpDate, String maRewDate, String maPrepDate, String medID, String medName) {
         this.activeIngrediant = activeIngrediant;

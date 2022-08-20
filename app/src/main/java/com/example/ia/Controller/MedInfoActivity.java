@@ -79,8 +79,10 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful() && task.getResult() != null) {
+                    System.out.println(task.getResult().size());
                     for (QueryDocumentSnapshot document : task.getResult()) {
-                        MedList.add(document.toObject(Med.class));
+                        Med med = document.toObject(Med.class);
+                        MedList.add(med);
                     }
                     getAllRidesTask.setResult(null);
                 }
@@ -93,6 +95,7 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
         getAllRidesTask.getTask().addOnCompleteListener(new OnCompleteListener<String>() {
             @Override
             public void onComplete(@NonNull Task<String> task) {
+                System.out.println("MEDLIST" + MedList);
                 recView.setAdapter(new BookAdapter(MedList, MedInfoActivity.this));
                 recView.setLayoutManager(new LinearLayoutManager(MedInfoActivity.this));
             }
@@ -126,6 +129,7 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
 
         }
         else if(selected.equals("Afterin")) {
+            System.out.println("SELECTED SOMETHING");
             for (Med v : MedList) {
                 if (v.getMedName().equals("Afterin")) {
                     filtered.add(v);
@@ -174,6 +178,7 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
         }
 
         else if(selected.equals("Vermidon")) {
+            System.out.println("SELECTED SOMETHING");
             for (Med v : MedList) {
                 if (v.getMedName().equals("Vermidon")) {
                     filtered.add(v);
