@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Controller.SignUpActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background2"
+        android:scaleType="centerCrop"/>
+
     <Spinner
         android:id="@+id/selectTypeSpinnerspinner"
         android:layout_width="171dp"
@@ -41,6 +47,7 @@
         android:text="Sign up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCreateUser" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCreateUser"
+        android:background="@drawable/custom_button"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Controller.MedInfoActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background2"
+        android:scaleType="centerCrop"/>
+
     <Button
         android:id="@+id/TBgetInfo"
         android:layout_width="wrap_content"
@@ -14,6 +20,7 @@
         android:layout_marginTop="105dp"
         android:layout_marginEnd="53dp"
         android:onClick="testDB"
+        android:background="@drawable/custom_button"
         android:text="Med Info"
         app:layout_constraintEnd_toStartOf="@+id/TBgobackMain2"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,6 +35,7 @@
         android:layout_marginEnd="68dp"
         android:onClick="goBack"
         android:text="Go Back"
+        android:background="@drawable/custom_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/TBgetInfo"
         app:layout_constraintTop_toTopOf="parent" />

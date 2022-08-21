@@ -112,7 +112,7 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
         MedList.get(position);
 
         Intent intent = new Intent(this, MedProfileActivity.class);
-        intent.putExtra("id", MedList.get(position).getMedID());
+        intent.putExtra("id", MedList.get(position).getMedID().toString());
         startActivity(intent);
     }
 
@@ -178,13 +178,16 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
         }
 
         else if(selected.equals("Vermidon")) {
-            System.out.println("SELECTED SOMETHING");
+//            System.out.println("SELECTED SOMETHING");
             for (Med v : MedList) {
+                System.out.println(v.getMedName());
                 if (v.getMedName().equals("Vermidon")) {
                     filtered.add(v);
                 }
             }
         }
+        recView.setAdapter(new BookAdapter(filtered, MedInfoActivity.this));
+        recView.setLayoutManager(new LinearLayoutManager(MedInfoActivity.this));
     }
 
     @Override

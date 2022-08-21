@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Controller.MenuActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background4"
+        android:scaleType="centerCrop"/>
+
     <Button
         android:id="@+id/BTgoAddVehicle"
         android:layout_width="wrap_content"
@@ -13,6 +19,7 @@
         android:layout_marginTop="75dp"
         android:onClick="goAddMed"
         android:text="Add Medicine"
+        android:background="@drawable/custom_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +34,7 @@
         android:layout_marginEnd="162dp"
         android:onClick="goMedInfo"
         android:text="Medicine Info"
+        android:background="@drawable/custom_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
