@@ -186,6 +186,9 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
                 }
             }
         }
+
+        MedList = filtered;
+
         recView.setAdapter(new BookAdapter(filtered, MedInfoActivity.this));
         recView.setLayoutManager(new LinearLayoutManager(MedInfoActivity.this));
     }
