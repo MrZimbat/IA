@@ -20,12 +20,14 @@ import com.example.ia.Modal.Medicine.Liftrin;
 import com.example.ia.Modal.Medicine.Vermidon;
 import com.example.ia.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class AddMedActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
+    private FirebaseUser mUser;
     private FirebaseFirestore firestore;
     private LinearLayout layout;
 
@@ -49,6 +51,7 @@ public class AddMedActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_med);
 
         mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
         firestore = FirebaseFirestore.getInstance();
         layout = findViewById(R.id.LOaddMed);
         userRoleSpinner = (Spinner) findViewById(R.id.SPaddMed);
@@ -121,43 +124,44 @@ public class AddMedActivity extends AppCompatActivity {
         String maExpDateString = maExpDateField.getText().toString();
         String maRewDate = maRewDateField.getText().toString();
         String maPrepDate = maPrepDateField.getText().toString();
+        String email = mUser.getEmail();
 
 
         DocumentReference newRideRef = firestore.collection(Constants.MED_CONSTANT).document();
         String medIDString = newRideRef.getId();
 
         if(selectedRole.equals("Vermidon")){
-            Vermidon newVermidon = new Vermidon(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Vermidon");
+            Vermidon newVermidon = new Vermidon(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Vermidon", email);
             firestore.collection("Med").document(medIDString).set(newVermidon);
         }
 
         if(selectedRole.equals("Caldril")){
-            Caldril newCaldril = new Caldril(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Caldril");
+            Caldril newCaldril = new Caldril(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Caldril", email);
             firestore.collection("Med").document(medIDString).set(newCaldril);
         }
 
         if(selectedRole.equals("Lastoril")){
-            Lastoril newLastoril = new Lastoril(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Lastoril");
+            Lastoril newLastoril = new Lastoril(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Lastoril", email);
             firestore.collection("Med").document(medIDString).set(newLastoril);
         }
 
         if(selectedRole.equals("Avetrol")){
-            Avetrol newAvetrol = new Avetrol(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Avetrol");
+            Avetrol newAvetrol = new Avetrol(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Avetrol", email);
             firestore.collection("Med").document(medIDString).set(newAvetrol);
         }
 
         if(selectedRole.equals("Afterin")){
-            Afterin newAfterin = new Afterin(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Afterin");
+            Afterin newAfterin = new Afterin(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Afterin", email);
             firestore.collection("Med").document(medIDString).set(newAfterin);
         }
 
         if(selectedRole.equals("Lifterin")){
-            Liftrin newLifterin = new Liftrin(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Lifterin");
+            Liftrin newLifterin = new Liftrin(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Lifterin", email);
             firestore.collection("Med").document(medIDString).set(newLifterin);
         }
 
         if(selectedRole.equals("Kaynesten")){
-            Kaynesten newKaynesten = new Kaynesten(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Kaynesten");
+            Kaynesten newKaynesten = new Kaynesten(activeIngrediantString, strengthString, typeString, countryString, maDateString, maExpDateString, maRewDate, maPrepDate, medIDString, "Kaynesten", email);
             firestore.collection("Med").document(medIDString).set(newKaynesten);
         }
     }

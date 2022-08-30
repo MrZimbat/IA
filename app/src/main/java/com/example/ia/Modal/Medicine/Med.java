@@ -14,12 +14,13 @@ public class Med implements Serializable {
     private String maPrepDate;
     private String medID;
     private String medName;
+    private String email;
 
     public Med(){
 
     }
 
-    public Med(String activeIngrediant, String strength, String type, String country, String maDate, String maExpDate, String maRewDate, String maPrepDate, String medID, String medName) {
+    public Med(String activeIngrediant, String strength, String type, String country, String maDate, String maExpDate, String maRewDate, String maPrepDate, String medID, String medName, String email) {
         this.activeIngrediant = activeIngrediant;
         this.strength = strength;
         this.type = type;
@@ -30,6 +31,16 @@ public class Med implements Serializable {
         this.maPrepDate = maPrepDate;
         this.medID = medID;
         this.medName = medName;
+        this.email = email;
+    }
+
+
+    public String getUserEmail() {
+        return email;
+    }
+
+    public void setUserEmail(String email) {
+        this.email = email;
     }
 
     public String getActiveIngrediant() {

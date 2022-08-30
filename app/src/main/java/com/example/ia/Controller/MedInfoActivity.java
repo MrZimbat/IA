@@ -32,6 +32,7 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
 
     //added for testing
     private ArrayList<Med> MedList;
+    private ArrayList<Med> displayMedList;
 
     private Spinner spinner;
 
@@ -47,6 +48,7 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
 
 
         MedList = new ArrayList<Med>();
+        displayMedList = new ArrayList<>();
 
         recView = findViewById(R.id.recView);
         //creating the spinner
@@ -96,7 +98,8 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
             @Override
             public void onComplete(@NonNull Task<String> task) {
                 System.out.println("MEDLIST" + MedList);
-                recView.setAdapter(new BookAdapter(MedList, MedInfoActivity.this));
+                displayMedList = (ArrayList<Med>) MedList.clone();
+                recView.setAdapter(new BookAdapter(displayMedList, MedInfoActivity.this));
                 recView.setLayoutManager(new LinearLayoutManager(MedInfoActivity.this));
             }
         });
@@ -109,30 +112,32 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
 
     @Override
     public void onNoteClick(int position) {
-        MedList.get(position);
+        displayMedList.get(position);
 
         Intent intent = new Intent(this, MedProfileActivity.class);
-        intent.putExtra("id", MedList.get(position).getMedID().toString());
+        intent.putExtra("id", displayMedList.get(position).getMedID().toString());
         startActivity(intent);
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        ArrayList<Med> filtered = new ArrayList<>();
-
         String selected = spinner.getItemAtPosition(spinner.getSelectedItemPosition()).toString();
         System.out.println("Spinner selected = " + selected);
 
-        if(selected.equals("No Filter")){
-            recView.setAdapter(new BookAdapter(filtered, MedInfoActivity.this));
-            recView.setLayoutManager(new LinearLayoutManager(this));
 
+        if(selected.equals("No Filter")){
+            recView.setAdapter(new BookAdapter(displayMedList, MedInfoActivity.this));
+            recView.setLayoutManager(new LinearLayoutManager(this));
+            return;
         }
-        else if(selected.equals("Afterin")) {
+
+        displayMedList.clear();
+
+        if(selected.equals("Afterin")) {
             System.out.println("SELECTED SOMETHING");
             for (Med v : MedList) {
                 if (v.getMedName().equals("Afterin")) {
-                    filtered.add(v);
+                    displayMedList.add(v);
                 }
             }
         }
@@ -140,7 +145,7 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
         else if(selected.equals("Avetrol")) {
             for (Med v : MedList) {
                 if (v.getMedName().equals("Avetrol")) {
-                    filtered.add(v);
+                    displayMedList.add(v);
                 }
             }
         }
@@ -148,7 +153,7 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
         else if(selected.equals("Caldril")) {
             for (Med v : MedList) {
                 if (v.getMedName().equals("Caldril")) {
-                    filtered.add(v);
+                    displayMedList.add(v);
                 }
             }
         }
@@ -156,7 +161,7 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
         else if(selected.equals("Kaynesten")) {
             for (Med v : MedList) {
                 if (v.getMedName().equals("Kaynesten")) {
-                    filtered.add(v);
+                    displayMedList.add(v);
                 }
             }
         }
@@ -164,7 +169,7 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
         else if(selected.equals("Lastoril")) {
             for (Med v : MedList) {
                 if (v.getMedName().equals("Lastoril")) {
-                    filtered.add(v);
+                    displayMedList.add(v);
                 }
             }
         }
@@ -172,7 +177,7 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
         else if(selected.equals("Liftrin")) {
             for (Med v : MedList) {
                 if (v.getMedName().equals("Liftrin")) {
-                    filtered.add(v);
+                    displayMedList.add(v);
                 }
             }
         }
@@ -182,14 +187,12 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
             for (Med v : MedList) {
                 System.out.println(v.getMedName());
                 if (v.getMedName().equals("Vermidon")) {
-                    filtered.add(v);
+                    displayMedList.add(v);
                 }
             }
         }
 
-        MedList = filtered;
-
-        recView.setAdapter(new BookAdapter(filtered, MedInfoActivity.this));
+        recView.setAdapter(new BookAdapter(displayMedList, MedInfoActivity.this));
         recView.setLayoutManager(new LinearLayoutManager(MedInfoActivity.this));
     }
 
