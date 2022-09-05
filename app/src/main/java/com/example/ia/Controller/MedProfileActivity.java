@@ -3,9 +3,11 @@ package com.example.ia.Controller;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.ia.Modal.Medicine.Med;
 import com.example.ia.R;
@@ -31,6 +33,7 @@ public class MedProfileActivity extends AppCompatActivity {
     private TextView maRewDate;
     private TextView strength;
     private TextView type;
+    private String email;
 
 
 
@@ -51,6 +54,8 @@ public class MedProfileActivity extends AppCompatActivity {
         maRewDate = findViewById(R.id.TVmaRewDate);
         strength = findViewById(R.id.TVStrength);
         type = findViewById(R.id.TVtype);
+
+
 
 
        String id = getIntent().getStringExtra("id");
@@ -77,10 +82,26 @@ public class MedProfileActivity extends AppCompatActivity {
                 maRewDate.setText(m.getMaRewDate());
                 strength.setText(m.getStrength());
                 type.setText(m.getType());
+
+                email = m.getUserEmail();
             }
         });
 
     }
 
+    public void sendEmail(View v){
+
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.setType("message/rfc822");
+        i.putExtra(Intent.EXTRA_EMAIL , new String[]{email});
+        i.putExtra(Intent.EXTRA_SUBJECT, "Reminder");
+        i.putExtra(Intent.EXTRA_TEXT , "The HTML/TEXT body content of the email");
+        try {
+            startActivity(Intent.createChooser(i, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(MedProfileActivity.this, "No email client configured. Please check.", Toast.LENGTH_SHORT).show();
+        }
+
+    }
 
 }
