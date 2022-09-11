@@ -13,133 +13,205 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/background2"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="-71dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/TVName3"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="224dp"
+        android:scrollbarSize="30dp"
+        android:text="Active Ingrediant:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVName2"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="224dp"
+        android:scrollbarSize="30dp"
+        android:text="Name:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVName9"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="408dp"
+        android:layout_marginEnd="224dp"
+        android:scrollbarSize="30dp"
+        android:text="Type:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVName10"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="368dp"
+        android:layout_marginEnd="224dp"
+        android:scrollbarSize="30dp"
+        android:text="Strength:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVName4"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="224dp"
+        android:scrollbarSize="30dp"
+        android:text="Country:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVName5"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="224dp"
+        android:scrollbarSize="30dp"
+        android:text="MA Date:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVName6"
+        android:layout_width="126dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="224dp"
+        android:scrollbarSize="30dp"
+        android:text="MA Expiry Date:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVName8"
+        android:layout_width="126dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="224dp"
+        android:scrollbarSize="30dp"
+        android:text="MA Renewal Date:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVName7"
+        android:layout_width="149dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="288dp"
+        android:layout_marginEnd="224dp"
+        android:scrollbarSize="30dp"
+        android:text="MA Preperation Date:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TVmaDate"
-        android:layout_width="195dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="224dp"
-        android:layout_marginEnd="185dp"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="116dp"
         android:scrollbarSize="30dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TVmaExtDate"
-        android:layout_width="195dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="272dp"
-        android:layout_marginEnd="185dp"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="116dp"
         android:scrollbarSize="30dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TVmaPrepDate"
-        android:layout_width="195dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="316dp"
-        android:layout_marginEnd="185dp"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="288dp"
+        android:layout_marginEnd="116dp"
         android:scrollbarSize="30dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TVmaRewDate"
-        android:layout_width="195dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="364dp"
-        android:layout_marginEnd="185dp"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="116dp"
         android:scrollbarSize="30dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TVStrength"
-        android:layout_width="195dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="408dp"
-        android:layout_marginEnd="185dp"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="368dp"
+        android:layout_marginEnd="116dp"
         android:scrollbarSize="30dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TVName"
-        android:layout_width="195dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="168dp"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
         android:layout_marginTop="88dp"
-        android:layout_marginEnd="185dp"
+        android:layout_marginEnd="116dp"
         android:scrollbarSize="30dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TVtype"
-        android:layout_width="195dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="448dp"
-        android:layout_marginEnd="185dp"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="408dp"
+        android:layout_marginEnd="116dp"
         android:scrollbarSize="30dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TVCountry"
-        android:layout_width="195dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="185dp"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="116dp"
         android:scrollbarSize="30dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TVai"
-        android:layout_width="195dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="129dp"
-        android:layout_marginEnd="185dp"
+        android:layout_width="101dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="116dp"
         android:scrollbarSize="30dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -147,11 +219,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="128dp"
+        android:background="@drawable/custom_button"
         android:onClick="sendEmail"
-        android:text="Button"
+        android:text="send notification"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:scrollbarSize="60dp"
+        android:text="Medicine Detail"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
