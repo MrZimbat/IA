@@ -71,9 +71,9 @@ public class MedInfoActivity extends AppCompatActivity implements BookAdapter.On
         spinner.setAdapter(dataAdapter);
         spinner.setOnItemSelectedListener(this);
 
-    }
+//    }
 
-    public void testDB(View v) {
+//    public void testDB(View v) {
         MedList.clear();
         TaskCompletionSource<String> getAllRidesTask = new TaskCompletionSource<>();
         firestore.collection(Constants.MED_CONSTANT)

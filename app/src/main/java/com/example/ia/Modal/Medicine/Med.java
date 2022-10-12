@@ -35,9 +35,7 @@ public class Med implements Serializable {
     }
 
 
-    public String getUserEmail() {
-        return email;
-    }
+    public String getUserEmail() { return email; }
 
     public void setUserEmail(String email) {
         this.email = email;
@@ -47,9 +45,7 @@ public class Med implements Serializable {
         return activeIngrediant;
     }
 
-    public void setActiveIngrediant(String activeIngrediant) {
-        this.activeIngrediant = activeIngrediant;
-    }
+    public void setActiveIngrediant(String activeIngrediant) { this.activeIngrediant = activeIngrediant; }
 
     public String getStrength() {
         return strength;
