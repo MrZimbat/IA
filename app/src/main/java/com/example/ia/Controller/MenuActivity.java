@@ -57,7 +57,7 @@ public class MenuActivity extends AppCompatActivity {
                 QuerySnapshot s = task.getResult();
                 s.toObjects(Med.class);
                 MedList = (ArrayList<Med>) s.toObjects(Med.class);
-                Toast.makeText(getApplicationContext(), MedList.size()+"", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), MedList.size()+"", Toast.LENGTH_SHORT).show();
             }
         });
 
