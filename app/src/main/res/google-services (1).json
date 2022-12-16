@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "823442192297",
+    "project_id": "ia-ibcs",
+    "storage_bucket": "ia-ibcs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823442192297:android:76aea94dfa5be46d1ff6b8",
+        "android_client_info": {
+          "package_name": "com.example.ia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823442192297-54ssbqq8eg2kb8ur52lfhjeaovuq4unk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYThAn_DUXivnsWPKT-8IaaeDXqzYPb_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823442192297-54ssbqq8eg2kb8ur52lfhjeaovuq4unk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
